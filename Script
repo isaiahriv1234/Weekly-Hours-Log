@@ -1,0 +1,16 @@
+function doPost(e) {
+    const sheet = SpreadsheetApp.openById('YOUR_SPREADSHEET_ID').getSheetByName('Sheet1');
+    const week = e.parameters.week[0];
+    const monday_desc = e.parameters.monday_desc[0];
+    const monday_hours = e.parameters.monday_hours[0];
+    const tuesday_desc = e.parameters.tuesday_desc[0];
+    const tuesday_hours = e.parameters.tuesday_hours[0];
+    const wednesday_desc = e.parameters.wednesday_desc[0];
+    const wednesday_hours = e.parameters.wednesday_hours[0];
+    const thursday_desc = e.parameters.thursday_desc[0];
+    const thursday_hours = e.parameters.thursday_hours[0];
+    const friday_desc = e.parameters.friday_desc[0];
+    const friday_hours = e.parameters.friday_hours[0];
+    sheet.appendRow([week, monday_desc, monday_hours, tuesday_desc, tuesday_hours, wednesday_desc, wednesday_hours, thursday_desc, thursday_hours, friday_desc, friday_hours]);
+    return ContentService.createTextOutput('Success');
+}
