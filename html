@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASMPC Weekly Hours Log</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: white;
+            max-width: 600px;
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .header {
+            background-color: maroon;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        .form-section {
+            padding: 20px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+            margin-top: 10px;
+        }
+        .day-section {
+            border: 2px solid maroon;
+            padding: 10px;
+            margin-top: 10px;
+            border-radius: 4px;
+            background: #fafafa;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            background: #f9f9f9;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 15px;
+            background-color: maroon;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-size: 16px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background-color: #9b1a1a;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Weekly Hours Log</h1>
+        </div>
+        <div class="form-section">
+            <form id="logForm" action="YOUR_GOOGLE_SCRIPT_URL" method="POST">
+                <label for="week">Week:</label>
+                <input type="week" id="week" name="week" required>
+                <div class="day-section">
+                    <label for="monday_desc">Monday:</label>
+                    <textarea id="monday_desc" name="monday_desc" placeholder="Description"></textarea>
+                    <input type="number" id="monday_hours" name="monday_hours" placeholder="Hours" min="0" step="0.5">
+                </div>
+                <div class="day-section">
+                    <label for="tuesday_desc">Tuesday:</label>
+                    <textarea id="tuesday_desc" name="tuesday_desc" placeholder="Description"></textarea>
+                    <input type="number" id="tuesday_hours" name="tuesday_hours" placeholder="Hours" min="0" step="0.5">
+                </div>
+                <div class="day-section">
+                    <label for="wednesday_desc">Wednesday:</label>
+                    <textarea id="wednesday_desc" name="wednesday_desc" placeholder="Description"></textarea>
+                    <input type="number" id="wednesday_hours" name="wednesday_hours" placeholder="Hours" min="0" step="0.5">
+                </div>
+                <div class="day-section">
+                    <label for="thursday_desc">Thursday:</label>
+                    <textarea id="thursday_desc" name="thursday_desc" placeholder="Description"></textarea>
+                    <input type="number" id="thursday_hours" name="thursday_hours" placeholder="Hours" min="0" step="0.5">
+                </div>
+                <div class="day-section">
+                    <label for="friday_desc">Friday:</label>
+                    <textarea id="friday_desc" name="friday_desc" placeholder="Description"></textarea>
+                    <input type="number" id="friday_hours" name="friday_hours" placeholder="Hours" min="0" step="0.5">
+                </div>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
